@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Atharva Sawai — Portfolio</title>
+  <meta name="description" content="Atharva Sawai — 3rd Year Computer Engineering student. MERN & DevOps: QuickShow, WhatsApp Clone, Vibecode Editor." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Minimal inline styles to make it readable without external CSS */
+    :root{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;line-height:1.5}
+    header, nav, main, footer, section { padding: 1rem; margin: 0 auto; max-width: 900px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    nav a{margin-right:0.8rem;text-decoration:none}
+    .hero{display:flex;gap:1rem;align-items:center}
+    .profile-img{width:110px;height:110px;border-radius:8px;object-fit:cover}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+    .card{border:1px solid #ddd;padding:0.75rem;border-radius:8px}
+    form input, form textarea {width:100%;padding:0.5rem;margin:0.3rem 0;border:1px solid #ccc;border-radius:4px}
+    button{padding:0.6rem 1rem;border-radius:6px;border:0;background:#0b74de;color:white;cursor:pointer}
+    footer{font-size:0.9rem;color:#555;text-align:center;margin-top:2rem}
+    ul.skills{columns:2;list-style:disc;padding-left:1rem}
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Atharva Sawai</h1>
+      <p>3rd Year Computer Engineering • Honors in Data Science</p>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="hero">
+        <img src="images/profile.jpg" alt="Atharva Sawai — profile photo" class="profile-img" />
+        <div>
+          <p>
+            I am a Computer Engineering student from Pune, India with an Honors in Data Science.
+            I build full-stack web apps (MERN), work with Docker & Kubernetes, and am comfortable with DevOps workflows.
+            I enjoy building production-ready features: authentication, realtime communication, and CI/CD pipelines.
+          </p>
+          <p>
+            Contact: <a href="mailto:atharva.s.official@gmail.com">atharva.s.official@gmail.com</a> •
+            GitHub: <a href="https://github.com/Atharva-VSawai" target="_blank" rel="noopener">Atharva-VSawai</a>
+          </p>
+        </div>
+      </div>
+      <p><strong>Education:</strong> Bachelor of Computer Engineering (Honors in Data Science) — Dr. D.Y. Patil College of Engineering (Expected 2027)</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <ul class="skills" role="list">
+        <li>Java, C++, JavaScript, Python</li>
+        <li>React.js, Next.js, HTML5, CSS3, Tailwind</li>
+        <li>Node.js, Express, MongoDB, MySQL, REST APIs</li>
+        <li>Docker, Kubernetes, AWS, GitLab CI/CD</li>
+        <li>WebRTC, Socket.IO, OAuth, JWT</li>
+        <li>DSA, OOPS, DBMS, OS, Networking</li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Selected Projects</h2>
+      <div class="projects">
+        <article class="card" aria-labelledby="p1">
+          <h3 id="p1">QuickShow — Movie Ticket Booking</h3>
+          <img src="images/project_quickshow.png" alt="QuickShow project screenshot" style="width:100%;height:120px;object-fit:cover;border-radius:6px" />
+          <p>React + Node + Kubernetes. Features: user auth, Stripe payments, TMDB integration, CI/CD pipeline, deployed on AWS EKS.</p>
+        </article>
+
+        <article class="card" aria-labelledby="p2">
+          <h3 id="p2">WhatsApp Clone</h3>
+          <img src="images/project_whatsapp.png" alt="WhatsApp clone screenshot" style="width:100%;height:120px;object-fit:cover;border-radius:6px" />
+          <p>Real-time messaging with Socket.IO, WebRTC for P2P video, Redis, Cloudinary for media, OTP-based MFA.</p>
+        </article>
+
+        <article class="card" aria-labelledby="p3">
+          <h3 id="p3">Vibecode Editor — AI Web IDE</h3>
+          <img src="images/project_vibecode.png" alt="Vibecode Editor screenshot" style="width:100%;height:120px;object-fit:cover;border-radius:6px" />
+          <p>Next.js + Monaco Editor + local LLMs (Ollama). Features: inline AI suggestions, secure auth, project templates.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+      <p>If you'd like to work with me or discuss an opportunity, send a message below.</p>
+
+      <form id="contact-form" action="https://example.com/form-endpoint" method="POST" novalidate>
+        <!-- NOTE: For GitHub Pages / static hosting, you can use a service like Formspree/Netlify Forms or just handle via mailto/JS. -->
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required minlength="2" />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" placeholder="Short subject" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required minlength="10"></textarea>
+
+        <button type="submit">Send Message</button>
+        <div id="form-status" role="status" aria-live="polite" style="margin-top:0.6rem"></div>
+      </form>
+
+      <script>
+        // minimal client-side validation + UX improvements (works without external libraries)
+        (function(){
+          const form = document.getElementById('contact-form');
+          const status = document.getElementById('form-status');
+          form.addEventListener('submit', function(e){
+            if(!form.checkValidity()){
+              // let the browser show built-in validation UI
+              status.textContent = 'Please fill in all required fields correctly.';
+              status.style.color = 'crimson';
+              return;
+            }
+            // Prevent real submission in this template; show demo success
+            e.preventDefault();
+            status.style.color = 'green';
+            status.textContent = 'Thanks! Your message was validated (demo). For production, connect this form to Formspree/Netlify or a server endpoint.';
+            // If you do have an endpoint, remove e.preventDefault() or perform fetch() here.
+          });
+        })();
+      </script>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Atharva Sawai</strong>. Resume & other projects on GitHub.</p>
+    <p><a href="https://github.com/Atharva-VSawai" target="_blank" rel="noopener">View my GitHub</a></p>
+  </footer>
+</body>
+</html>
